@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BentoBooks - Online Book Store</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Geologica:wght,CRSV@100..900,0&display=swap");
+    </style>
+  </head>
+  <audio controls autoplay>
+    <source src="/bookstore/meow.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <body>
+    <header>
+      <h1>BentoBooks</h1>
+      <p>Your Gateway to Infinite Stories</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#login">Login</a></li>
+        <li><a href="#cart">Cart</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <article>
+        <h2>Welcome to BentoBooks</h2>
+        <p>Discover your next favorite book from our extensive collection.</p>
+        <p>Featured Book: <a href="book-details.html">The Great Gatsby</a></p>
+      </article>
+
+      <article>
+        <h2>Store Navigation</h2>
+        <div style="text-align: center; margin: 20px 0">
+          <img
+            src="https://media.istockphoto.com/id/1411029939/photo/top-view-on-colorful-stacked-books-education-and-learning-concept-background.jpg?s=612x612&w=0&k=20&c=9X5M5RI_aAXvRv4r1OZUSBYSVKx0HK0Sg2dLUN8oQwQ="
+            alt="Bookstore Navigation Banner"
+            usemap="#storemap"
+            style="
+              width: 100%;
+              max-width: 800px;
+              height: auto;
+              border-radius: 10px;
+              box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            "
+          />
+
+          <map name="storemap">
+            <area
+              shape="rect"
+              coords="0,0,266,266"
+              href="#new-arrivals"
+              alt="New Arrivals"
+              title="Browse New Arrivals"
+            />
+
+            <area
+              shape="rect"
+              coords="267,0,533,266"
+              href="#best-sellers"
+              alt="Best Sellers"
+              title="View Best Sellers"
+            />
+
+            <area
+              shape="rect"
+              coords="534,0,800,266"
+              href="#offers"
+              alt="Special Offers"
+              title="Check Special Offers"
+            />
+          </map>
+        </div>
+
+        <div
+          id="new-arrivals"
+          style="
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+          "
+        >
+          <h3>New Arrivals</h3>
+          <p>Check out the latest books added to our collection this month!</p>
+        </div>
+
+        <div
+          id="best-sellers"
+          style="
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+          "
+        >
+          <h3>Best Sellers</h3>
+          <p>
+            Discover what everyone's reading - our top-selling books this week!
+          </p>
+        </div>
+
+        <div
+          id="offers"
+          style="
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+          "
+        >
+          <h3>Special Offers</h3>
+          <p>
+            Don't miss out on amazing deals and discounts on selected titles!
+          </p>
+        </div>
+      </article>
+
+      <article>
+        <h2>Featured Books</h2>
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin: 20px 0;
+          "
+        >
+          <figure>
+            <a href="book-details.html">
+              <img
+                src="https://m.media-amazon.com/images/I/81T4dS6IkaL._AC_UF1000,1000_QL80_.jpg"
+                alt="The Great Gatsby Book Cover"
+                title="The Great Gatsby by F. Scott Fitzgerald"
+                width="150"
+                height="225"
+                style="
+                  width: 150px;
+                  height: 225px;
+                  object-fit: cover;
+                  border-radius: 5px;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                "
+              />
+            </a>
+            <figcaption>The Great Gatsby<br /><small>$12.99</small></figcaption>
+          </figure>
+
+          <figure>
+            <a href="book-details.html">
+              <img
+                src="https://m.media-amazon.com/images/I/71wANojhEKL._AC_UF1000,1000_QL80_.jpg"
+                alt="1984 Book Cover"
+                title="1984 by George Orwell"
+                width="150"
+                height="225"
+                style="
+                  width: 150px;
+                  height: 225px;
+                  object-fit: cover;
+                  border-radius: 5px;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                "
+              />
+            </a>
+            <figcaption>1984<br /><small>dedh sau rupiya</small></figcaption>
+          </figure>
+
+          <figure>
+            <a href="book-details.html">
+              <img
+                src="https://m.media-amazon.com/images/I/81gepf1eMqL._AC_UF1000,1000_QL80_.jpg"
+                alt="To Kill a Mockingbird Book Cover"
+                title="To Kill a Mockingbird by Harper Lee"
+                width="150"
+                height="225"
+                style="
+                  width: 150px;
+                  height: 225px;
+                  object-fit: cover;
+                  border-radius: 5px;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                "
+              />
+            </a>
+            <figcaption>
+              To Kill a Mockingbird<br /><small>$13.99</small>
+            </figcaption>
+          </figure>
+
+          <figure>
+            <a href="book-details.html">
+              <img
+                src="https://m.media-amazon.com/images/I/7134u8yD1YL._UF1000,1000_QL80_.jpg"
+                alt="Pride and Prejudice Book Cover"
+                title="Pride and Prejudice by Jane Austen"
+                width="150"
+                height="225"
+                style="
+                  width: 150px;
+                  height: 225px;
+                  object-fit: cover;
+                  border-radius: 5px;
+                  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+                "
+              />
+            </a>
+            <figcaption>
+              Pride and Prejudice<br /><small>$11.99</small>
+            </figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <aside>
+        <h3>Book Categories</h3>
+
+        <h4><b>Top Categories</b></h4>
+        <ol>
+          <li><i>Fiction</i></li>
+          <li><i>Non-Fiction</i></li>
+          <li><i>Mystery & Thriller</i></li>
+          <li><i>Romance</i></li>
+          <li><i>Science Fiction</i></li>
+        </ol>
+
+        <h4><b>Genres</b></h4>
+        <ul>
+          <li>Fantasy</li>
+          <li>Biography</li>
+          <li>History</li>
+          <li>Self-Help</li>
+          <li><mark>Children's Books</mark></li>
+          <li>Young Adult</li>
+        </ul>
+
+        <h4><b>Formats</b></h4>
+        <dl>
+          <dt>Paperback</dt>
+          <dd>Lightweight and portable format perfect for casual reading</dd>
+          <dt>Hardcover</dt>
+          <dd>
+            Premium durable edition with dust jacket, ideal for collectors
+          </dd>
+
+          <dt>eBook</dt>
+          <dd>Digital format for instant download and reading on any device</dd>
+        </dl>
+      </aside>
+    </section>
+
+    <footer>
+      <p>&copy; 2026 BentoBooks. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

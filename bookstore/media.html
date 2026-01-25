@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media - BentoBooks</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .media-section {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+      }
+      .media-container {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        border-radius: 15px;
+        padding: 30px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+      .media-container h3 {
+        color: #333;
+        margin-bottom: 20px;
+        font-size: 1.5em;
+        border-bottom: 2px solid #4a90a4;
+        padding-bottom: 10px;
+      }
+      video {
+        width: 100%;
+        max-width: 800px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+      audio {
+        width: 100%;
+        max-width: 500px;
+        margin-top: 10px;
+      }
+      .audio-info {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 15px;
+      }
+      .audio-info p {
+        color: #666;
+        font-size: 0.9em;
+        margin: 0;
+      }
+      .promo-description {
+        margin-top: 15px;
+        color: #555;
+        line-height: 1.6;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>BentoBooks</h1>
+      <p>Your Gateway to Infinite Stories</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about-books.html">Books</a></li>
+        <li><a href="registration-form.html">Register</a></li>
+        <li><a href="#cart">Cart</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section class="media-section">
+        <h2>Media Gallery</h2>
+
+        <!-- Promotional Video Section -->
+        <div class="media-container">
+          <h3>🎬 Store Promotional Video</h3>
+          <video controls autoplay loop muted>
+            <source
+              src="https://www.w3schools.com/html/mov_bbb.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="https://www.w3schools.com/html/mov_bbb.webm"
+              type="video/webm"
+            />
+            Your browser does not support the video element.
+          </video>
+          <p class="promo-description">
+            <strong>Welcome to BentoBooks!</strong> Watch our promotional video
+            to discover the amazing world of books awaiting you. From classic
+            literature to modern bestsellers, we have something for every
+            reader.
+          </p>
+        </div>
+
+        <!-- Background Music Section -->
+        <div class="media-container">
+          <h3>🎵 Background Music</h3>
+          <audio controls autoplay loop>
+            <source src="meow.mp3" type="audio/mpeg" />
+            <source
+              src="https://www.w3schools.com/html/horse.mp3"
+              type="audio/mpeg"
+            />
+            Your browser does not support the audio element.
+          </audio>
+          <div class="audio-info">
+            <p>
+              🎶 Enjoy our relaxing background music while you browse our
+              collection. This calming melody is perfect for your reading
+              sessions!
+            </p>
+          </div>
+        </div>
+
+        <!-- Additional Media Info -->
+        <div class="media-container">
+          <h3>📱 Media Features</h3>
+          <ul style="color: #555; line-height: 1.8; padding-left: 20px">
+            <li>
+              <strong>Video:</strong> Supports autoplay, loop, and user controls
+            </li>
+            <li>
+              <strong>Audio:</strong> Background music with loop functionality
+            </li>
+            <li>
+              <strong>Formats:</strong> MP4, WebM for video; MP3, OGG for audio
+            </li>
+            <li>
+              <strong>Accessibility:</strong> All media elements include
+              fallback messages
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 BentoBooks. All rights reserved.</p>
+    </footer>
+
+    <!-- Script for Welcome Alert -->
+    <script>
+      alert("Welcome to Online Book Store");
+    </script>
+  </body>
+</html>

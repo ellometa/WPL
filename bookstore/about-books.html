@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Price Comparison - BentoBooks</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      table {
+        width: 100%;
+        max-width: 900px;
+        margin: 20px auto;
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+      }
+      caption {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 15px;
+        color: #333;
+      }
+      thead {
+        background-color: #4a90a4;
+        color: white;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        padding: 12px 15px;
+        text-align: left;
+      }
+      tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+      tbody tr:hover {
+        background-color: #e8f4f8;
+      }
+      tfoot {
+        background-color: #333;
+        color: white;
+        font-weight: bold;
+      }
+      .available {
+        color: green;
+        font-weight: bold;
+      }
+      .limited {
+        color: orange;
+        font-weight: bold;
+      }
+      .out-of-stock {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>BentoBooks</h1>
+      <p>Your Gateway to Infinite Stories</p>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="registration-form.html">Register</a></li>
+        <li><a href="#cart">Cart</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section>
+        <h2>Book Price Comparison</h2>
+        <p>Compare prices and availability of our popular books below.</p>
+
+        <table>
+          <caption>
+            Popular Books - Price & Availability Guide
+          </caption>
+
+          <thead>
+            <tr>
+              <th>Book Name</th>
+              <th>Author</th>
+              <th>Price</th>
+              <th>Availability</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>The Great Gatsby</td>
+              <td>F. Scott Fitzgerald</td>
+              <td>$12.99</td>
+              <td class="available">In Stock</td>
+            </tr>
+            <tr>
+              <td>1984</td>
+              <td>George Orwell</td>
+              <td>$14.99</td>
+              <td class="available">In Stock</td>
+            </tr>
+            <tr>
+              <td>To Kill a Mockingbird</td>
+              <td>Harper Lee</td>
+              <td>$13.99</td>
+              <td class="limited">Limited Stock</td>
+            </tr>
+            <tr>
+              <td>Pride and Prejudice</td>
+              <td>Jane Austen</td>
+              <td>$11.99</td>
+              <td class="available">In Stock</td>
+            </tr>
+            <tr>
+              <td rowspan="2">Complete Works of Shakespeare</td>
+              <td rowspan="2">William Shakespeare</td>
+              <td>$24.99 (Paperback)</td>
+              <td class="available">In Stock</td>
+            </tr>
+            <tr>
+              <td>$49.99 (Hardcover)</td>
+              <td class="limited">Limited Stock</td>
+            </tr>
+            <tr>
+              <td>The Catcher in the Rye</td>
+              <td>J.D. Salinger</td>
+              <td>$10.99</td>
+              <td class="out-of-stock">Out of Stock</td>
+            </tr>
+            <tr>
+              <td colspan="2"><strong>Bundle: Classic Collection (5 Books)</strong></td>
+              <td>$54.99</td>
+              <td class="available">In Stock</td>
+            </tr>
+          </tbody>
+
+          <tfoot>
+            <tr>
+              <td colspan="2">Total Books Available</td>
+              <td colspan="2">7 Titles | Free Shipping on orders over $35</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 BentoBooks. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

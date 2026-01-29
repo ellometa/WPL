@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Price Comparison - BentoBooks</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="nav.css" />
     <style>
       table {
         width: 100%;
@@ -72,79 +73,134 @@
     </nav>
 
     <main>
-      <section>
-        <h2>Book Price Comparison</h2>
-        <p>Compare prices and availability of our popular books below.</p>
+      <section class="main-layout">
+        <aside class="sidebar">
+          <div class="categories-card">
+            <h3>Book Categories</h3>
+            <ul class="categories-list">
+              <li>Fiction</li>
+              <li>Non-Fiction</li>
+              <li>Sci-Fi & Fantasy</li>
+              <li>Mystery & Thriller</li>
+              <li>Biography</li>
+              <li>Children's Books</li>
+            </ul>
+          </div>
+        </aside>
 
-        <table>
-          <caption>
-            Popular Books - Price & Availability Guide
-          </caption>
+        <div class="content-area">
+          <section>
+            <h2>Book Price Comparison</h2>
+            <p>Compare prices and availability of our popular books below.</p>
+    
+            <table>
+              <caption>
+                Popular Books - Price & Availability Guide
+              </caption>
+    
+              <thead>
+                <tr>
+                  <th>Book Name</th>
+                  <th>Author</th>
+                  <th>Price</th>
+                  <th>Availability</th>
+                </tr>
+              </thead>
+    
+              <tbody>
+                <tr>
+                  <td>The Great Gatsby</td>
+                  <td>F. Scott Fitzgerald</td>
+                  <td>$12.99</td>
+                  <td class="available">In Stock</td>
+                </tr>
+                <tr>
+                  <td>1984</td>
+                  <td>George Orwell</td>
+                  <td>$14.99</td>
+                  <td class="available">In Stock</td>
+                </tr>
+                <tr>
+                  <td>To Kill a Mockingbird</td>
+                  <td>Harper Lee</td>
+                  <td>$13.99</td>
+                  <td class="limited">Limited Stock</td>
+                </tr>
+                <tr>
+                  <td>Pride and Prejudice</td>
+                  <td>Jane Austen</td>
+                  <td>$11.99</td>
+                  <td class="available">In Stock</td>
+                </tr>
+                <tr>
+                  <td rowspan="2">Complete Works of Shakespeare</td>
+                  <td rowspan="2">William Shakespeare</td>
+                  <td>$24.99 (Paperback)</td>
+                  <td class="available">In Stock</td>
+                </tr>
+                <tr>
+                  <td>$49.99 (Hardcover)</td>
+                  <td class="limited">Limited Stock</td>
+                </tr>
+                <tr>
+                  <td>The Catcher in the Rye</td>
+                  <td>J.D. Salinger</td>
+                  <td>$10.99</td>
+                  <td class="out-of-stock">Out of Stock</td>
+                </tr>
+                <tr>
+                  <td colspan="2"><strong>Bundle: Classic Collection (5 Books)</strong></td>
+                  <td>$54.99</td>
+                  <td class="available">In Stock</td>
+                </tr>
+              </tbody>
+    
+              <tfoot>
+                <tr>
+                  <td colspan="2">Total Books Available</td>
+                  <td colspan="2">7 Titles | Free Shipping on orders over $35</td>
+                </tr>
+              </tfoot>
+            </table>
+          </section>
 
-          <thead>
-            <tr>
-              <th>Book Name</th>
-              <th>Author</th>
-              <th>Price</th>
-              <th>Availability</th>
-            </tr>
-          </thead>
+          <section id="book-cards">
+            <h2>Featured Books</h2>
+            <div class="book-row">
+              <div class="book-card">
+                <h3>The Great Gatsby</h3>
+                <p>By F. Scott Fitzgerald</p>
+                <div class="rating">★★★☆☆ 3 Stars</div>
+                <p class="review">"A classic novel of the Jazz Age."</p>
+                <p class="price">$12.99</p>
+              </div>
+              <div class="book-card">
+                <h3>1984</h3>
+                <p>By George Orwell</p>
+                <div class="rating">★★★★★ 5 Stars</div>
+                <p class="review">"A chilling dystopian vision."</p>
+                <p class="price">$14.99</p>
+              </div>
+              <div class="book-card">
+                <h3>To Kill a Mockingbird</h3>
+                <p>By Harper Lee</p>
+                <div class="rating">★★★★☆ 4 Stars</div>
+                <p class="review">"A powerful story of racial injustice."</p>
+                <p class="price">$13.99</p>
+              </div>
+            </div>
+          </section>
 
-          <tbody>
-            <tr>
-              <td>The Great Gatsby</td>
-              <td>F. Scott Fitzgerald</td>
-              <td>$12.99</td>
-              <td class="available">In Stock</td>
-            </tr>
-            <tr>
-              <td>1984</td>
-              <td>George Orwell</td>
-              <td>$14.99</td>
-              <td class="available">In Stock</td>
-            </tr>
-            <tr>
-              <td>To Kill a Mockingbird</td>
-              <td>Harper Lee</td>
-              <td>$13.99</td>
-              <td class="limited">Limited Stock</td>
-            </tr>
-            <tr>
-              <td>Pride and Prejudice</td>
-              <td>Jane Austen</td>
-              <td>$11.99</td>
-              <td class="available">In Stock</td>
-            </tr>
-            <tr>
-              <td rowspan="2">Complete Works of Shakespeare</td>
-              <td rowspan="2">William Shakespeare</td>
-              <td>$24.99 (Paperback)</td>
-              <td class="available">In Stock</td>
-            </tr>
-            <tr>
-              <td>$49.99 (Hardcover)</td>
-              <td class="limited">Limited Stock</td>
-            </tr>
-            <tr>
-              <td>The Catcher in the Rye</td>
-              <td>J.D. Salinger</td>
-              <td>$10.99</td>
-              <td class="out-of-stock">Out of Stock</td>
-            </tr>
-            <tr>
-              <td colspan="2"><strong>Bundle: Classic Collection (5 Books)</strong></td>
-              <td>$54.99</td>
-              <td class="available">In Stock</td>
-            </tr>
-          </tbody>
-
-          <tfoot>
-            <tr>
-              <td colspan="2">Total Books Available</td>
-              <td colspan="2">7 Titles | Free Shipping on orders over $35</td>
-            </tr>
-          </tfoot>
-        </table>
+          <section id="gallery-section">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+              <div class="gallery-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/The_Great_Gatsby_cover_1925_%281%29.jpg" alt="The Great Gatsby"></div>
+              <div class="gallery-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/1984first.jpg" alt="1984"></div>
+              <div class="gallery-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Pride_and_prejudice.jpg" alt="Pride and Prejudice"></div>
+              <div class="gallery-item"><img src="https://upload.wikimedia.org/wikipedia/en/7/79/To_Kill_a_Mockingbird.JPG" alt="To Kill a Mockingbird"></div>
+            </div>
+          </section>
+        </div>
       </section>
     </main>
 

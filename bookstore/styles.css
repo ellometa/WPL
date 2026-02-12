@@ -40,6 +40,34 @@ nav {
     z-index: 100;
 }
 
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: #e74c3c;
+    background-color: #f0f2f5;
+    text-decoration: underline;
+    border-radius: 0 0 5px 5px;
+    /* Only round bottom corners, or 0 for none. User said "do not round top corners" */
+}
+
 footer {
     background-color: var(--secondary);
     color: rgba(255, 255, 255, 0.6);
@@ -74,7 +102,6 @@ audio {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 280px;
     text-align: center;
-    transition: transform 0.2s;
 }
 
 .category-card:hover {
@@ -109,7 +136,6 @@ audio {
     padding: 8px;
     margin: 3px 0;
     cursor: pointer;
-    transition: background-color 0.2s;
 }
 
 .category-item:hover {
@@ -198,22 +224,7 @@ audio {
     margin-top: 10px;
 }
 
-.main-layout {
-    display: flex;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    gap: 30px;
-    align-items: flex-start;
-}
 
-.sidebar {
-    flex: 0 0 250px;
-}
-
-.content-area {
-    flex: 1;
-}
 
 .categories-card {
     background-color: white;
@@ -234,11 +245,6 @@ audio {
     padding: 10px;
     border-bottom: 1px solid #eee;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.categories-list li:last-child {
-    border-bottom: none;
 }
 
 .categories-list li:hover {

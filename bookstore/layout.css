@@ -1,0 +1,27 @@
+.main-layout {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.sidebar {
+    flex: 0 0 250px;
+}
+
+.content-area {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .main-layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        flex: auto;
+        width: 100%;
+    }
+}

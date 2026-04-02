@@ -45,14 +45,14 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about-books.html">Categories</a></li>
         <li><a href="registration-form.html">Login</a></li>
-        <li><a href="media.html">Cart</a></li>
+        <li><a href="cart.html">Cart</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
     <section class="main-layout">
       <div class="content-area">
-        <article>
+        <article id="welcome-message">
           <h1>Welcome to BentoBooks</h1>
           <p style="font-size: 1.1em; max-width: 800px; margin: 0 auto">
             Discover your next favorite book from our extensive collection.
@@ -298,5 +298,9 @@
         >
       </p>
     </footer>
+
+    <script>
+      document.getElementById("welcome-message").innerHTML = "Welcome to Online Book Shop";
+    </script>
   </body>
 </html>

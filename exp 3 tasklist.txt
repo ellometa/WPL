@@ -1,0 +1,118 @@
+# Experiment 3: Task List
+
+## Task 1: Welcome Message Using DOM
+**Concepts**: Introduction to JS, DOM
+**Scenario**: When the page loads, show welcome message.
+
+**Task**:
+* Display: "Welcome to Online Book Shop" inside a `<div>`
+* Use `document.getElementById()` and JS
+
+**Deliverable**:
+* `index.html`
+* Script that updates text using DOM
+
+---
+
+## Task 2: Book Price Data Types
+**Concepts**: Data Types
+**Scenario**: Store and display book details.
+
+**Task**:
+* Create variables:
+  * `title` (string)
+  * `price` (number)
+  * `inStock` (boolean)
+* Display values on the page using DOM.
+
+---
+
+## Task 3: Calculate Total Price Using Operators
+**Concepts**: Operators
+**Scenario**: User selects quantity.
+
+**Task**:
+* Declare:
+  * `price` = 450
+  * `quantity` = 3
+* Calculate total using operators
+* Display result: "Total Price = ₹____"
+
+---
+
+## Task 4: Apply Discount Using if-else
+**Concepts**: Control Flow
+**Scenario**: Give discount if total > 1000.
+
+**Task**:
+* If `total > 1000` → apply 10% discount
+* Else → no discount
+* Show final price using DOM
+
+---
+
+## Task 5: Category Selection Using `switch`
+**Concepts**: Control Flow
+**Scenario**: Navigate to section based on category.
+
+**Task**:
+* Variable: `category = "programming"`
+* Use `switch`:
+  * `programming` → Show "Programming Books"
+  * `novel` → Show "Novel Section"
+  * `kids` → Show "Kids Section"
+
+---
+
+## Task 6: Store Book List Using Array
+**Concepts**: Arrays
+**Scenario**: Store available books.
+
+**Task**:
+* Create array: `["HTML", "CSS", "JavaScript", "Python"]`
+* Display all books in a `<ul>` using loop
+
+---
+
+## Task 7: Add Book to Cart Using Array + Function
+**Concepts**: Arrays, Functions
+**Scenario**: User adds book to cart.
+
+**Task**:
+* Create empty cart array
+* Create function `addToCart(bookName)`
+* Push book into cart
+* Display cart items using DOM
+
+---
+
+## Task 8: Count Cart Items
+**Concepts**: Arrays, Operators
+**Scenario**: Show number of items in cart.
+
+**Task**:
+* Use `cart.length`
+* Display: "Items in cart: X"
+
+---
+
+## Task 9: Search Book Using Loop & Control Flow
+**Concepts**: Arrays, Control Flow
+**Scenario**: Check if book exists.
+
+**Task**:
+* Search `"JavaScript"` in array
+* If found → show "Book Available"
+* Else → "Out of Stock"
+
+---
+
+## Task 10: Complete Mini Checkout System
+**Concepts**: Functions, DOM, Operators, Arrays
+**Scenario**: Calculate final bill.
+
+**Task**:
+* Cart array contains prices: `[450, 300, 250]`
+* Function `calculateTotal()`
+* Calculate sum using loop
+* Display total bill amount

@@ -6,6 +6,7 @@
     <title>Shopping Cart - BentoBooks</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="layout.css" />
+    <link rel="stylesheet" href="table.css" />
   </head>
 
   <body>
@@ -38,11 +39,13 @@
 
         <div id="book-list" class="info-card" style="border-left-color: #4a90a4; margin-top: 15px;"></div>
 
+        <div id="search-result" class="info-card" style="border-left-color: #3498db; margin-top: 15px;"></div>
+
         <p id="cart-count" class="cart-count" style="margin-top: 20px;">Items in cart: 0</p>
 
         <div class="cart-items-container">
-          <ul id="cart-items" class="cart-items-list">
-          </ul>
+          <div id="cart-items">
+          </div>
           <p class="cart-empty-message">Your cart is empty. Browse our <a href="about-books.html">book collection</a> to add items!</p>
         </div>
 
@@ -56,75 +59,6 @@
       <p>&copy; 2026 BentoBooks. All rights reserved.</p>
     </footer>
 
-    <script>
-      var title = "The Great Gatsby";
-      var price = 450;
-      var inStock = true;
-
-      document.getElementById("book-details").innerHTML =
-        "<h3>Book Details</h3>" +
-        "<p><strong>Title:</strong> " + title + "</p>" +
-        "<p><strong>Price:</strong> ₹" + price + "</p>" +
-        "<p><strong>In Stock:</strong> " + inStock + "</p>";
-
-      var bookPrice = 450;
-      var quantity = 3;
-      var total = bookPrice * quantity;
-
-      document.getElementById("price-calculator").innerHTML =
-        "<h3>Price Calculator</h3>" +
-        "<p><strong>Price per book:</strong> ₹" + bookPrice + "</p>" +
-        "<p><strong>Quantity:</strong> " + quantity + "</p>" +
-        "<p><strong>Total Price = ₹" + total + "</strong></p>";
-
-      var finalPrice = total;
-      if (total > 1000) {
-        var discount = total * 0.10;
-        finalPrice = total - discount;
-        document.getElementById("discount-result").innerHTML =
-          "<h3>Discount Applied</h3>" +
-          "<p>Subtotal: ₹" + total + "</p>" +
-          "<p>Discount (10%): -₹" + discount + "</p>" +
-          "<p><strong>Final Price = ₹" + finalPrice + "</strong></p>";
-      } else {
-        document.getElementById("discount-result").innerHTML =
-          "<h3>No Discount</h3>" +
-          "<p>Total: ₹" + total + "</p>" +
-          "<p>No discount applicable (total must be over ₹1000)</p>" +
-          "<p><strong>Final Price = ₹" + finalPrice + "</strong></p>";
-      }
-
-      var category = "programming";
-      var categoryMessage = "";
-
-      switch (category) {
-        case "programming":
-          categoryMessage = "Programming Books";
-          break;
-        case "novel":
-          categoryMessage = "Novel Section";
-          break;
-        case "kids":
-          categoryMessage = "Kids Section";
-          break;
-        default:
-          categoryMessage = "Unknown Category";
-      }
-
-      document.getElementById("category-display").innerHTML =
-        "<h3>Category Selection</h3>" +
-        "<p>Selected category: <strong>" + category + "</strong></p>" +
-        "<p>You are browsing: <strong>" + categoryMessage + "</strong></p>";
-
-      var books = ["HTML", "CSS", "JavaScript", "Python"];
-      var bookListHTML = "<h3>Available Books</h3><ul>";
-
-      for (var i = 0; i < books.length; i++) {
-        bookListHTML = bookListHTML + "<li>" + books[i] + "</li>";
-      }
-
-      bookListHTML = bookListHTML + "</ul>";
-      document.getElementById("book-list").innerHTML = bookListHTML;
-    </script>
+    <script src="cart.js"></script>
   </body>
 </html>

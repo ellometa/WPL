@@ -1,0 +1,25 @@
+
+Objectives for the Exp:
+•	Develop a secure user registration system that allows users to create accounts by collecting and storing their credentials (username, email, and password) in a MySQL database, ensuring passwords are hashed for security.
+•	Create a robust user login mechanism that verifies user credentials against the stored data, initiating a session for authenticated users to maintain their state across different pages of the application.
+•	Implement session management using PHP sessions to track user login status and facilitate navigation within the application while maintaining user state during their session.
+•	Set up cookies to enable "remember me" functionality, allowing users to stay logged in across sessions for a defined period, enhancing user experience and convenience.
+•	Incorporate validation techniques for user input during both registration and login processes to prevent SQL injection and cross-site scripting (XSS) attacks, ensuring a secure application environment (if feasible).
+
+COs to be achieved: 
+1.	Design dynamic web pages using various HTML tags.
+2.	Use CSS to prepare the layout of web pages.
+3.	Apply JavaScript for validation in client-side programming.
+4.	Integrate server-side pages using PHP.
+5.	Apply database operations by integrating SQL queries and session variables.
+ 
+
+Post Lab Subjective/Objective type Questions: 
+1.	Design a user registration form that submits data via AJAX. Upon successful submission, display a confirmation message dynamically on the same page without reloading. Explain how you would handle error messages and form validation using jQuery.
+2.	Create a live search feature for a product catalog webpage. When users type in a search query, AJAX should fetch filtered product results from the server without refreshing the page. Describe how you would set up the server endpoint and handle the search input using jQuery.
+3.	Implement a "Load More" button for a blog homepage that fetches additional posts when clicked. Use AJAX to retrieve new content from the server and append it to the existing list without reloading the page. Discuss the necessary jQuery methods and how you would manage the loading state.
+4.	Develop a dashboard that fetches and displays user statistics using AJAX. When a user selects a date range, the dashboard should dynamically update the graphs without refreshing. Outline how you would implement this feature using jQuery to handle the AJAX requests and process the returned data.
+5.	Discuss potential security vulnerabilities associated with the use of sessions and cookies in web applications. Specifically, explain what session hijacking is and how attackers might exploit sessions or cookies to gain unauthorized access. What countermeasures can be implemented in your web application to mitigate these risks?
+6.	Analyze the impact of cookie expiration settings on user experience in a web application. How would you determine the appropriate expiration time for cookies used in the "remember me" functionality? Additionally, discuss the implications of using persistent vs. session cookies for user authentication and how each affects user privacy and application security.
+7.	(Optional) Analyze the impact of cookie expiration settings on user experience in a web application. How would you determine the appropriate expiration time for cookies used in the "remember me" functionality? Additionally, discuss the implications of using persistent vs. session cookies for user authentication and how each affects user privacy and application security.
+

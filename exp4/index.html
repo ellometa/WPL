@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Register</h2>
+        <form id="registerForm">
+            <p>Name:</p>
+            <input type="text" id="name">
+            <span class="error" id="nameError">Need a name</span>
+
+            <p>Email:</p>
+            <input type="email" id="email">
+            <span class="error" id="emailError">Invalid email</span>
+
+            <p>Password:</p>
+            <input type="password" id="password">
+            <span class="error" id="passwordError">Invalid password format</span>
+
+            <p>Age:</p>
+            <input type="number" id="age">
+            <span class="error" id="ageError">Age 18-100</span>
+
+            <p id="msg"></p>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

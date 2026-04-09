@@ -43,10 +43,9 @@ h1 {
 
 .offer-card:hover {
     transform: scale(1.05);
-    /* Subtle zoom on hover */
+
 }
 
-/* Remove box glow animation, keep text focus */
 @keyframes pulse-glow {
     0% {
         box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);

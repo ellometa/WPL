@@ -1,0 +1,33 @@
+You find yourself assigned to complete Exp 5: HTML form integration with PHP for data collection and processing.
+
+## Objective
+Develop a dynamic web application that collects user input through an HTML form, processes it using PHP on an Apache server (XAMPP), and dynamically displays the result using multiple HTTP methods (`$_POST`, `$_GET`, and `$_REQUEST`).
+
+## Requirements & Implementation Steps
+
+### 1. Setup the Project Workspace
+- Create a new directory named `exp5` in the current project root.
+- Ensure the directory is available via the local XAMPP server by either copying it to XAMPP's `htdocs` (/Applications/XAMPP/xamppfiles/htdocs/) or by creating a symlink.
+
+### 2. Form Creation (Frontend)
+- **Base Form**: Copy the existing HTML form and assets from the `exp4` directory into `exp5`. This form will serve as the frontend for this exp.
+- Keep the existing CSS and basic JavaScript validations from Exp 4.
+- Modify the form structure (e.g. `index.html` or rename to `index.php`) so that I can easily test the three different submission methods. You can do this by adding three distinct submit buttons that dynamically adjust the form's `method` (GET vs POST) and `action` (target PHP script) before submission, or by simply duplicating the form section three times.
+
+### 3. Server-Side Processing (PHP Backend)
+Create three separate PHP scripts to handle the form submissions using different HTTP methods:
+- `post_registration.php`: Processes the form data by accessing the `$_POST` array.
+- `get_registration.php`: Handles the form data by accessing the `$_GET` array.
+- `request_registration.php`: Retrieves the data by accessing the `$_REQUEST` array.
+
+### 4. Backend Validation & Response Rendering
+Inside EACH of the three PHP scripts:
+- Validate the incoming input fields using PHP (e.g., check that fields are not empty, email is in a valid format, age bounds, etc.).
+- If validation fails, safely display error messages alerting the user to what went wrong.
+- If validation succeeds, process the input and generate dynamic HTML output to display the submitted information in a structured, clean, and visually pleasing layout.
+
+### 5. Validation and Documentation
+- Run a browser test on each of the methods to ensure data gets transferred properly via GET (URL parameters) vs POST (request body).
+- Capture screenshots for each of the successful form submission results (POST output, GET output, and REQUEST output) and save them into `exp5/img/`.
+
+Please create an Implementation Plan to outline your approach, then proceed to copy the frontend over, build out the PHP scripts, link it up to my XAMPP htdocs, and verify that it all works flawlessly!

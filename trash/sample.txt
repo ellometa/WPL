@@ -1,0 +1,56 @@
+<?php
+function clean ($data) {
+return htmlspecialchars(trim($data));
+if ($_SERVER ["REQUEST_METHOD"] == "GET") {
+$name = clean ($_GET[ 'name']) ;
+$email = clean($_GET|'email']);
+$password = clean($_GET['password'l);
+$age = clean ($_GET ['age']) ;
+echo "<h2>GET METHOD</h2>";
+echo "Name: $name <br>";
+echo "Email: $email <br»";
+echo "Age: $age <br»";
+>
+
+
+<?php
+function clean ($data) {
+return htmlspecialchars(trim($data));
+}
+if ($_SERVER ["REQUEST_METHOD"] == "POST") {
+$name = clean($_POST[' name'l) ;
+$email = clean($_POST['email']);
+$password = clean($_POST['password"1) ;
+$age = clean ($_POST['age'l);
+if (!$name || !$email || !$password ||!$age) {
+echo "All fields required!";
+exit;
+if (!filter_var ($email, FILTER_VALIDATE_EMAIL)) {
+echo "Invalid email!";
+exit;
+
+echo "<h2>POST METHOD</h2>";
+echo "Name: $name <br>";
+echo "Email: $email <br»";
+echo "Age: $age <br»";
+}
+?>
+
+
+
+
+Request_registration.php
+<? php
+function clean ($data) {
+return htmlspecialchars(trim($data));
+}
+$name = clean ($_REQUEST[' name']) ;
+$email = clean ($_REQUEST[' email'1);
+$password = clean ($_REQUEST['password' ]) ;
+$age = clean ($_REQUEST ['age']);
+echo "<h2>REQUEST METHOD</h2>";
+echo "Name: $name <br»";
+echo "Email: $email <br»";
+echo "Age: $age <br»";
+?>
+

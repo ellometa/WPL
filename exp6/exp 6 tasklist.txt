@@ -1,0 +1,15 @@
+1.	Start XAMPP server.
+2.	Create database and table in phpMyAdmin.
+3.	Establish PHP-MySQL connection.
+4.	Create HTML form for data input.
+5.	Write PHP code for:
+•	Insert
+•	Fetch
+•	Update
+•	Delete
+6.	Execute queries.
+7.	Display results.
+8.	Close database connection.
+
+
+Design and implement an application to demonstrate HTML form integration with PHP for data collection and processing and perform the CRUD operations.

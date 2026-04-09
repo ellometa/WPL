@@ -14,9 +14,9 @@ typedef tree<ll, null_type, less<ll>, rb_tree_tag, tree_order_statistics_node_up
 mt19937_64 RNG(chrono::steady_clock::now().time_since_epoch().count());
 
 #define fast_input() ios::sync_with_stdio(false); cin.tie(nullptr);
-#define fr(i, a, b) for (ll i = (a); i < (ll)(b); ++i)   // for loop exclusive
-#define fri(i, a, b) for (ll i = (a); i <= (ll)(b); ++i) // for loop inclusive
-#define frr(i, a, b) for (ll i = (a); i > (ll)(b); --i)  // for loop reverse
+#define fr(i, a, b) for (ll i = (a); i < (ll)(b); ++i)   
+#define fri(i, a, b) for (ll i = (a); i <= (ll)(b); ++i) 
+#define frr(i, a, b) for (ll i = (a); i > (ll)(b); --i)  
 #define in(n)    \
     ll n; cin >> n;
 #define ina(x, n)               \
@@ -43,17 +43,14 @@ constexpr ll MOD = 1e9 + 7;
 #define onoo cout << "No" << endl;
 #define ve1 cout << "-1" << endl;
 
-
 #define all(x) (x).begin(), (x).end()
 #define rall(x) reverse((x).begin(), (x).end())
 #define sz(x) (ll)(x).size()
 
-
 #define nline <<'\n'
 
-//.........Bit_Manipulation...........//
-#define msb(mask) (63-__builtin_clzll(mask))  /// 0 -> -1
-#define lsb(mask) __builtin_ctzll(mask)  /// 0 -> 64
+#define msb(mask) (63-__builtin_clzll(mask))  
+#define lsb(mask) __builtin_ctzll(mask)  
 #define lusb(mask) __builtin_ctzll(~(mask))
 #define cntsetbit(mask) __builtin_popcountll(mask)
 #define checkbit(mask,bit) ((mask >> bit) & 1ll)
@@ -63,13 +60,8 @@ constexpr ll MOD = 1e9 + 7;
 
 constexpr ll INF = LLONG_MAX >> 1;
 
-
-//---------------------------------------------------------------------------------------------------------
-
-//* Modular Multiplication
 ll mod_mul(ll a, ll b) {return ((a % MOD) * (b % MOD)) % MOD;}
 
-//* Binary Exponentiation
 ll binpow(ll a, ll b, ll m = MOD) {
     ll res = 1;
     a %= m;
@@ -80,27 +72,21 @@ ll binpow(ll a, ll b, ll m = MOD) {
     }
     return res;
 }
- 
-//* Modular Addition
-ll mod_add(ll a, ll b) {return ((a % MOD) + (b % MOD)) % MOD;}
- 
-//* Modular Subtraction
-ll mod_sub(ll a, ll b) {return ((a % MOD) - (b % MOD) + MOD) % MOD;}
- 
-//* Modular Division (using Modular Inverse)
-ll mod_inv(ll a, ll m = MOD) {return binpow(a, m - 2, m);}  // Fermat's Little Theorem
- 
-ll mod_div(ll a, ll b) {return mod_mul(a, mod_inv(b));}
- 
-//?----------------------------------------------------------------------------------------------------------
 
-// Factorial with modular arithmetic
+ll mod_add(ll a, ll b) {return ((a % MOD) + (b % MOD)) % MOD;}
+
+ll mod_sub(ll a, ll b) {return ((a % MOD) - (b % MOD) + MOD) % MOD;}
+
+ll mod_inv(ll a, ll m = MOD) {return binpow(a, m - 2, m);}  
+
+ll mod_div(ll a, ll b) {return mod_mul(a, mod_inv(b));}
+
 vector<ll> fact, inv_fact;
 void init_factorial(ll n, ll m = MOD) {
     fact.resize(n + 1, 1);
     inv_fact.resize(n + 1, 1);
     for (ll i = 2; i <= n; ++i) fact[i] = fact[i - 1] * i % m;
-    inv_fact[n] = binpow(fact[n], m - 2, m); // Fermat's Little Theorem for modular inverse
+    inv_fact[n] = binpow(fact[n], m - 2, m); 
     for (ll i = n - 1; i >= 1; --i) inv_fact[i] = inv_fact[i + 1] * (i + 1) % m;
 }
 ll nCr(ll n, ll r, ll m = MOD) {
@@ -108,9 +94,6 @@ ll nCr(ll n, ll r, ll m = MOD) {
     return fact[n] * inv_fact[r] % m * inv_fact[n - r] % m;
 }
 
-//--------------------------------------------------------------------------------------------------------------------
-
-//* GCD using the Euclidean Algorithm
 template <typename T>
 T gcd(T a, T b) {
     while (b != 0) {
@@ -120,11 +103,9 @@ T gcd(T a, T b) {
     return a;
 }
 
-//* LCM using the GCD formula
 template <typename T>
-T lcm(T a, T b) {return (a / gcd(a, b)) * b;}  // a * b / gcd(a, b)
+T lcm(T a, T b) {return (a / gcd(a, b)) * b;}  
 
-//* Sieve of Eratosthenes for primes
 vi sieve(ll n) {
     vi st;
     vector<bool> is_prime(n + 1, true);
@@ -144,13 +125,7 @@ vi sieve(ll n) {
     return st;
 }
 
-
-
-//--------------------------------------------------------------------------------------------------------
-
-//* Debuggers
 #define debug(x) cout << #x << " = " << x << endl;
-
 
 template<typename T>
 void print_container(const T& container) {
@@ -162,15 +137,9 @@ void print_container(const T& container) {
 }
 #define print(x) print_container(x);
 
-
-//--------------------------------------------------------------------------------------------------------------------
-
-//?-----------------------------------------------------------------------------------------------------------
-
 void solve(){
     in(n);
     fr(i, 0, n){
-        
 
     }
 }
@@ -179,9 +148,9 @@ int main(){
     fast_input();
 
     ll t=1;
-    // cin >> t;
+
     for (ll i = 1; i <= t; i++){
-        // cout << "Case " << i << ":" << endl;
+
         solve();
     }
 

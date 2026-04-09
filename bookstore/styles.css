@@ -65,7 +65,7 @@ nav a:hover {
     background-color: #f0f2f5;
     text-decoration: underline;
     border-radius: 0 0 5px 5px;
-    /* Only round bottom corners, or 0 for none. User said "do not round top corners" */
+
 }
 
 footer {
@@ -75,7 +75,6 @@ footer {
     margin-top: 0;
     font-size: 0.9em;
 }
-
 
 audio {
     position: absolute;
@@ -221,8 +220,6 @@ audio {
     font-size: 1.1em;
     margin-top: 10px;
 }
-
-
 
 .categories-card {
     background-color: white;

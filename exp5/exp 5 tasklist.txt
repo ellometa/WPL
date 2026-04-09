@@ -1,0 +1,36 @@
+Objectives for the Exp:
+●	To Implement User Input Handling: Develop an HTML form that allows users to input data, ensuring a user-friendly interface for data collection.
+●	To Integrate PHP for Server-Side Processing: Utilize PHP to process the data received from the HTML form, enabling dynamic content generation based on user inputs.
+●	To Dynamically Display Results: Create a method to display the processed information on the web page, showcasing how server-side scripts can influence the content presented to the user.
+
+
+1.	Design dynamic web pages using various HTML tags.
+2.	Use CSS to prepare the layout of web pages.
+3.	Apply JavaScript for validation in client-side programming.
+4.	Integrate server-side pages using PHP.
+
+
+Setting Up the Server Environment
+●	Install a local server environment (XAMPP/MAMP) to host the application.
+●	Start the Apache server and ensure it is running.
+Creating HTML Form
+●	Develop an HTML form to receive user input.
+Processing User Input with PHP
+●	Create a PHP file (process.php) to handle the form submission.
+Testing the Application
+●	Open the HTML file in a web browser.
+●	Fill in the form and submit to ensure that the output displays correctly and dynamically based on user input
+
+
+"http://macbook-air-2.local/dashboard/"
+
+Problem statement:
+Design and implement an application to demonstrate HTML form integration with PHP for data collection and processing.
+
+Utilize the registration page designed in Exp No. 1 and create PHP scripts to handle form submission and data processing as follows:
+
+1. Create separate PHP scripts for handling form submissions using different methods:
+●	post_registration.php: Processes the registration form data using the $_POST method.
+●	get_registration.php: Handles the form data using the $_GET method.
+●	request_registration.php: Retrieves the submitted data using the $_REQUEST method.
+2. Each script should validate the input fields (e.g., check for valid email format and ensure mandatory fields are filled) and display the submitted registration details in a structured format.

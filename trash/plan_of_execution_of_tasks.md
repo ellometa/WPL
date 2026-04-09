@@ -1,10 +1,10 @@
 # Plan of Execution of Tasks
 
-The following tasks from Experiment 3 (`exp 3 tasklist.txt`) have been reviewed against the current codebase (`index.html` and `cart.html`) to check their completion status:
+The following tasks from Exp 3 (`exp 3 tasklist.txt`) have been reviewed against the current codebase (`index.html` and `cart.html`) to check their completion status:
 
 ## Pending Tasks (To Be Implemented)
 
-All tasks from Experiment 3 have been successfully implemented.
+All tasks from Exp 3 have been successfully implemented.
 
 ---
 

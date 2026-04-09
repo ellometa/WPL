@@ -1,0 +1,85 @@
+create a new webpage
+
+aim of this project is to develop a JavaScript program that implements client-side validation for HTML forms, enhancing user experience by providing immediate feedback and reducing server-side processing.
+
+
+
+1.	Implement Basic Validation:
+•	Check for required fields and ensure they are filled before submission.
+•	Validate data types (e.g., ensuring email fields contain valid email addresses).
+2.	Enhance User Feedback:
+•	Provide clear error messages that guide users on how to correct their input.
+•	Highlight fields that contain errors dynamically.
+3.	Integrate Advanced Validations:
+•	Implement complex validations (e.g., password confirmation, minimum/maximum length).
+•	Consider real-time validation as the user types.
+4.	Test and Debug the Program:
+•	Use various test cases to ensure that all validation scenarios are covered.
+•	Fix any issues to ensure smooth user interaction.
+5.	Document the Code:
+•	Write thorough documentation explaining the code, functions, and intended behavior of the validation process.
+
+
+Design dynamic web pages using various HTML tags.
+Use CSS to prepare the layout of web pages.
+Apply JavaScript for validation in client-side programming.
+
+
+html code should be something like this:
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+</head>
+<body>
+<h2>Register</h2>
+<form id="registerForm">
+<label>Name:</label><br>
+<input type="text" id="name"><br><br>
+<label>Email:</label><br>
+<input type="email" id="email"><br><br>
+<label>Password:</label><br>
+<input type="password" id="password"><br><br>
+<label>Age:</label><br>
+<input type="number" id="age"><br><br>
+<button type="submit">Submit</button>
+</form>
+<p id="message"></p>
+<script src="script.js"></script>
+</body>
+</html>
+
+
+JavaScript code should be something like this
+document.getElementById("registerForm").addEventListener("submit", function(e) {
+e.preventDefault();
+const name = document.getElementById("name").value.trim();
+const email = document.getElementById("email").value.trim();
+const password = document.getElementById("password").value.trim();
+const age = document.getElementById("age").value.trim();
+const message = document.getElementById("message");
+// Password must contain:
+// at least 1 letter
+// at least 1 number
+// at least 1 special character
+// minimum 8 characters
+const passwordRegex =
+/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+if (!name || !email || !password || !age) {
+message.textContent = "All fields are required!";
+return;
+}
+if (!passwordRegex.test(password)) {
+message.textContent =
+"Password must contain letters, numbers, special characters and be at least
+8 characters long.";
+return;
+}
+if (age < 18 || age > 100) {
+message.textContent = "Age must be 18 or above or less than 100.";
+return;
+}
+message.textContent = "Registration successful!";
+});
+
+delete all images in /img and store new screenshots of various testcases in img folder 

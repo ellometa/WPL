@@ -1,4 +1,6 @@
+alert("Welcome to Online Book Shop");
 var title = "The Great Gatsby";
+
 var price = 450;
 var inStock = true;
 
@@ -86,14 +88,13 @@ for (var i = 0; i < books.length; i++) {
 bookListHTML = bookListHTML + "</tbody></table>";
 document.getElementById("book-list").innerHTML = bookListHTML;
 
-// Task 9: Search Book Using Loop & Control Flow
 var searchQuery = "JavaScript";
 var isFound = false;
 
 for (var j = 0; j < books.length; j++) {
   if (books[j] === searchQuery) {
     isFound = true;
-    break; // Stop searching once found
+    break; 
   }
 }
 
@@ -105,14 +106,13 @@ if (isFound) {
 }
 document.getElementById("search-result").innerHTML = searchResultHTML;
 
-// Task 7 & 8: Add Book to Cart Using Array + Function
-var cart = []; // Empty cart array
-var cartPrices = []; // Array keeping track of item prices
+var cart = []; 
+var cartPrices = []; 
 
 function addToCart(bookName, bookPrice) {
   cart.push(bookName);
   cartPrices.push(bookPrice);
-  
+
   var cartHTML = "<table><thead><tr><th>Book Name</th><th>Price</th></tr></thead><tbody>";
   var sum = 0;
   for (var k = 0; k < cart.length; k++) {
@@ -120,27 +120,21 @@ function addToCart(bookName, bookPrice) {
     sum = sum + parseInt(cartPrices[k]);
   }
   cartHTML = cartHTML + "</tbody>";
-  
+
   if (cart.length > 0) {
     cartHTML = cartHTML + "<tfoot><tr><td><strong>Total Bill</strong></td><td><strong>₹" + sum + "</strong></td></tr></tfoot>";
   }
   cartHTML = cartHTML + "</table>";
-  
+
   document.getElementById("cart-items").innerHTML = cartHTML;
   document.getElementById("cart-count").innerHTML = "Items in cart: " + cart.length;
-  
+
   var emptyMessage = document.querySelector(".cart-empty-message");
   if (emptyMessage) {
     emptyMessage.style.display = cart.length > 0 ? "none" : "block";
   }
-  
-  // Clear the old summary div as it's now in the table
+
   document.getElementById("cart-total").innerHTML = "";
 }
 
-function calculateTotal() {
-  // This is now integrated into addToCart for live updates
-}
-
-// Initialize empty table
 document.getElementById("cart-items").innerHTML = "<table><thead><tr><th>Book Name</th><th>Price</th></tr></thead><tbody><tr><td colspan='2' style='text-align:center'>No items in cart</td></tr></tbody></table>";

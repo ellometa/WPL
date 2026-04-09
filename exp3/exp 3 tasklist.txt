@@ -1,4 +1,4 @@
-# Experiment 3: Task List
+# Exp 3: Task List
 
 ## Task 1: Welcome Message Using DOM
 **Concepts**: Introduction to JS, DOM

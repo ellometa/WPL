@@ -1,0 +1,88 @@
+Please develop a Client-Side Form Validation webpage as described below.
+
+**Objective:**
+Develop an HTML registration form that uses JavaScript for client-side validation. This should enhance user experience by providing immediate feedback, reducing server-side processing, and creating a modern, stylized layout.
+
+**Requirements:**
+
+1. **HTML Structure:**
+   - Create a registration form with fields for: `Name`, `Email`, `Password`, and `Age`.
+   - You can use the provided baseline HTML code (below) as a starting point, but ensure the structure is semantically sound.
+
+2. **Styling (CSS):**
+   - Provide a beautiful, responsive layout for the web page using CSS. 
+   - Ensure the form is centered, visually appealing, and uses clear typography.
+
+3. **Client-Side Validation (JavaScript):**
+   - **Basic Validation:** Check that all fields are filled before allowing submission. Ensure Email has a valid email structure.
+   - **Advanced Validation:** 
+     - *Password:* Must contain at least 1 letter, 1 number, 1 special character, and be a minimum of 8 characters long.
+     - *Age:* Must be between 18 and 100.
+   - **Enhanced Feedback & Real-time:** Dynamically highlight fields with errors (e.g., outline them in red) as the user types or leaves the field (real-time validation).
+   - Display clear, distinct error messages explaining exactly how users can correct their input.
+
+4. **Testing and Screenshots:**
+   - Delete all existing images inside the `img` folder.
+   - Using browser tools, test various validation scenarios (e.g., blank fields, invalid email, weak password, valid submission).
+   - Capture screenshots of these test cases and save them in the `img` folder.
+
+5. **Documentation:**
+   - Document the code thoroughly with comments explaining the logic, functions, and behavior of the validation process.
+
+---
+**Reference Code to Start Base**
+
+*HTML:*
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+</head>
+<body>
+<h2>Register</h2>
+<form id="registerForm">
+<label>Name:</label><br>
+<input type="text" id="name"><br><br>
+<label>Email:</label><br>
+<input type="email" id="email"><br><br>
+<label>Password:</label><br>
+<input type="password" id="password"><br><br>
+<label>Age:</label><br>
+<input type="number" id="age"><br><br>
+<button type="submit">Submit</button>
+</form>
+<p id="message"></p>
+<script src="script.js"></script>
+</body>
+</html>
+```
+
+*JavaScript:*
+```javascript
+document.getElementById("registerForm").addEventListener("submit", function(e) {
+e.preventDefault();
+const name = document.getElementById("name").value.trim();
+const email = document.getElementById("email").value.trim();
+const password = document.getElementById("password").value.trim();
+const age = document.getElementById("age").value.trim();
+const message = document.getElementById("message");
+
+// Password testing
+const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/;
+
+if (!name || !email || !password || !age) {
+  message.textContent = "All fields are required!";
+  return;
+}
+if (!passwordRegex.test(password)) {
+  message.textContent = "Password must contain letters, numbers, special characters and be at least 8 characters long.";
+  return;
+}
+if (age < 18 || age > 100) {
+  message.textContent = "Age must be 18 or above or less than 100.";
+  return;
+}
+message.textContent = "Registration successful!";
+});
+```
